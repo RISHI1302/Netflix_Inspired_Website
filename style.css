@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
-
+    /* outline: 1px solid blue; */
 }
 
 .main {
@@ -21,7 +21,7 @@
 
 .navbar {
     height: 88px;
-    width: 80%;
+    width: 95%;
     /* border: 2px solid red; */
     margin: auto;
     display: flex;
@@ -50,7 +50,7 @@
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     font-weight: 600;
-    margin: 20px;
+    margin: 0 5px;
     border-radius: 7px;
 }
 
@@ -88,10 +88,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0 1rem;
 }
 
 .heading1 {
-    height: 140px;
+    /* min-height: 140px; */
+    height: auto;
     width: 100%;
     max-width: 600px;
     color: white;
@@ -115,10 +117,10 @@
 }
 
 .hero-info-inp {
-    padding: 20px 220px 20px 15px;
-    /* width: 100%;
+    /* padding: 20px 220px 20px 15px; */
+    width: 100%;
     max-width: 380px;
-    padding: 1rem; */
+    padding: 20px 15px;
     border: 1px solid rgb(114, 114, 114);
     background-color: rgba(43, 43, 43, 0.8);
     border-radius: 7px;
@@ -128,14 +130,19 @@
 }
 
 .hero-info-btn {
-    margin-left: 8px;
+    padding: 0 24px;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     font-size: 1rem;
-    padding: 20px 24px;
-    border-radius: 7px;
     font-weight: 600;
     color: white;
     border: none;
+    border-radius: 7px;
     background-color: red;
+    margin-left: 20px;
 }
 
 form {
@@ -144,7 +151,7 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .hero-info-btn:hover {
@@ -273,12 +280,20 @@ form {
     font-size: 0.9rem;
 }
 
-.reason-card-span {
+/* .reason-card-span {
     position: absolute;
     color: white;
     font-size: 4.0rem;
     left: 70%;
     top: 70%;
+} */
+
+.reason-card-span {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 3rem;
+    color: white;
 }
 
 .faqs {
@@ -345,6 +360,13 @@ form {
     font-weight: 500;
 }
 
+.footer-boxes {
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .footer-boxes a {
     color: white;
     opacity: 0.7;
@@ -352,12 +374,6 @@ form {
     font-weight: 500;
 }
 
-.footer-boxes {
-    height: 200px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
 
 .footer-box {
     display: flex;
@@ -390,22 +406,91 @@ form {
 
 @media (max-width: 600px) {
 
-    .nav-icon{
+    .nav-icon {
+        margin: 8px;
         width: 60px;
     }
-    
+
+    .nav-logo img {
+        width: 100px;
+        height: auto;
+    }
+
     .options {
-        width: 18%;
-        padding-left:0;
+        width: 12px;
+        /* padding-left: 0; */
         overflow: hidden;
+    }
+
+    .heading1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+    }
+
+    form {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .hero-info-inp {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-info-btn {
+        margin-left: 0;
+        padding: 16px 24px;
     }
 }
 
-@media (max-width:768px){
-    .reasons-to-join-cards{
+@media (max-width:768px) {
+    .reasons-to-join-cards {
         flex-direction: column;
     }
-    .reason-card{
+
+    .reason-card {
         width: 100%;
     }
+}
+
+@media (max-width: 687px) {
+
+    .footer-boxes {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        gap: 25px;
+    }
+
+    .footer-box {
+        width: 100%;
+    }
+
+    .footer-para1,
+    .footer-para2 {
+        margin: 20px 0;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .navbar {
+        width: 95%;
+    }
+
+    .nav-logo img {
+        width: 110px;
+        height: auto;
+    }
+
+    .nav-btns {
+        gap: 8px;
+    }
+
+    .nav-icon {
+        margin: 0;
+    }
+
 }
