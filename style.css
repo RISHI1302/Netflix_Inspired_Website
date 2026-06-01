@@ -144,6 +144,7 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .hero-info-btn:hover {
@@ -385,4 +386,26 @@ form {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+
+    .nav-icon{
+        width: 60px;
+    }
+    
+    .options {
+        width: 18%;
+        padding-left:0;
+        overflow: hidden;
+    }
+}
+
+@media (max-width:768px){
+    .reasons-to-join-cards{
+        flex-direction: column;
+    }
+    .reason-card{
+        width: 100%;
+    }
 }
