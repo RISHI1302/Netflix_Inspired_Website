@@ -1,9 +1,29 @@
 const faqCards = document.querySelectorAll(".faq-card");
 const slider = document.querySelector(".slider-cards");
+
+
 const leftBtn = document.querySelector(".left-btn");
 const rightBtn = document.querySelector(".right-btn");
 const container = document.querySelector(".cards-container");
 
+const forms = document.querySelectorAll(".email-form");
+
+// Mail verification
+forms.forEach((form) => {
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const input = form.querySelector(".hero-info-inp");
+        const error = form.nextElementSibling;
+        if (!input.value.includes("@") || !input.value.includes(".")) {
+            error.textContent = "Please enter a valid email address";
+        } else {
+            error.textContent = "";
+        }
+    });
+});
+
+// Silder functionality
 let currPosition = 0;
 
 leftBtn.classList.add("hide-btn");

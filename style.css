@@ -151,7 +151,13 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
+}
 
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
 }
 
 .hero-info-btn:hover {
