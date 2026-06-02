@@ -238,6 +238,11 @@ form {
     background-color: rgb(57, 57, 57);
 }
 
+.hide-btn {
+    opacity: 0;
+    pointer-events: none;
+}
+
 .full-hero-section {
     /* height: 200vh; */
     padding: 2rem 0;
@@ -279,14 +284,6 @@ form {
     opacity: 0.7;
     font-size: 0.9rem;
 }
-
-/* .reason-card-span {
-    position: absolute;
-    color: white;
-    font-size: 4.0rem;
-    left: 70%;
-    top: 70%;
-} */
 
 .reason-card-span {
     position: absolute;
@@ -340,7 +337,7 @@ form {
     margin-bottom: 10px;
     font-size: 1.2rem;
     line-height: 1.5;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .faq-answer.active {
