@@ -8,6 +8,13 @@ const container = document.querySelector(".cards-container");
 
 const forms = document.querySelectorAll(".email-form");
 
+const movieCards = document.querySelectorAll(".movie-card");
+const modalOverlay = document.querySelector(".modal-overlay");
+const modalTitle = document.querySelector(".modal-title");
+const modalDesc = document.querySelector(".modal-desc");
+const modalImg = document.querySelector(".modal-img");
+const closeBtn = document.querySelector(".close-btn");
+
 // Mail verification
 forms.forEach((form) => {
     form.addEventListener("submit", (event) => {
@@ -91,4 +98,28 @@ faqCards.forEach((card) => {
         const icon = card.querySelector("i");
         icon.classList.toggle("rotate");
     });
+});
+
+// Card popup
+movieCards.forEach((card) => {
+    card.addEventListener("click", () => {
+
+        modalTitle.textContent = card.dataset.title;
+        modalDesc.textContent = card.dataset.description;
+
+        // Get modal image from data attribute
+        modalImg.src = card.dataset.modelImg;
+
+        modalOverlay.classList.add("show");
+    });
+});
+
+closeBtn.addEventListener("click", () => {
+    modalOverlay.classList.remove("show");
+});
+
+modalOverlay.addEventListener("click", (e) => {
+    if (e.target === modalOverlay) {
+        modalOverlay.classList.remove("show");
+    }
 });

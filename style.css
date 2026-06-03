@@ -430,6 +430,89 @@ form {
     margin: 0 auto;
 }
 
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-overlay.show {
+    display: flex;
+}
+
+.modal-overlay.show .modal {
+    transform: scale(1);
+}
+
+.modal {
+    width: 600px;
+    max-width: 90%;
+    background: #181818;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transform: scale(0.8);
+    transition: 0.3s;
+}
+
+.modal::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 280px;
+    height: 150px;
+
+    background: linear-gradient(transparent,
+            rgba(24, 24, 24, 0.8),
+            #181818);
+
+    pointer-events: none;
+    z-index: 2;
+}
+
+.movie-card:hover {
+    transform: scale(1.03);
+}
+
+.modal-img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    position: relative;
+    z-index: 1;
+}
+
+.modal-content {
+    padding: 25px;
+    position: relative;
+    z-index: 3;
+}
+
+.modal-title {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.modal-desc {
+    color: white;
+    line-height: 1.6;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 4;
+}
+
 @media (max-width: 600px) {
 
     .nav-icon {
